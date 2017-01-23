@@ -1,0 +1,69 @@
+
+@mixin border-radius{
+	-webkit-border-radius:10px;
+	-ms-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+$bgColor:#3a4563;
+body{
+	background:$bgColor;
+}
+
+.red{color:red}
+.login-box{
+	width:90%;
+	padding: 0 5%;
+	max-width:360px; 
+	height:180px;
+	position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+	div{
+		display:flex;
+		-webkit-display:flex;
+		p{
+			flex:1;
+			-webkit-flex:1; 
+			margin-right:10px;
+			input[type="text"]{		
+				width:100%;		
+				height:50px;
+				box-sizing:border-box; 
+				border:0;
+				@include border-radius;
+				padding:0 10px; 
+				vertical-align:middle;				
+				margin-bottom:10px;
+			}			
+		}
+		input[type="button"]{
+			width:90px;
+			border:0;
+			@include border-radius;
+			text-align:center;			
+			cursor:pointer;
+			margin-bottom:10px;
+		}
+	}
+	button{
+		width:100%;
+		max-width:360px;
+		height:50px;
+		line-height:50px;
+		border:0;
+		@include border-radius;
+		text-align:center;
+		background:#5f74dd;
+		cursor:pointer;
+		font-size:20px;
+		color:#fff;
+	}
+}
+#yzm{
+	width:100%;
+	max-width:360px;
+}
+input:focus{
+	outline:0
+}

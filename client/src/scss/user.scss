@@ -1,0 +1,132 @@
+#nav{
+  width:100%;
+  height: 50px;
+  background: #2d78f4;  
+  font-size:20px;   
+  li{
+    float: left;
+    padding:0 15px;
+    line-height: 50px;
+    cursor: pointer;
+    color:#fff;
+    list-style: none; 
+    a{
+      text-decoration: none;
+      color: #fff;
+    }   
+  }   
+}
+@mixin login-layout($width,$widthMax){
+  width:$width;
+  max-width:$widthMax;
+  box-sizing:border-box;
+}
+@mixin border-radius{
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+#banner{
+  width: 100%;
+  height: 180px;
+  background: url(/src/img/banner1.jpg) no-repeat center -750px;
+}  
+#login{
+  @include login-layout(90%,400px);
+  margin:0 auto 50px;
+  input[type="text"]{
+    @include border-radius;
+    @include login-layout(100%,400px);
+    height:50px;
+    padding:0 10px;   
+    vertical-align:middle;
+    margin-bottom:10px;
+  }
+  textarea{
+    @include border-radius;
+    @include login-layout(100%,400px);
+    height:90px;
+    padding:10px; 
+  }
+  input[type="button"]{
+    @include border-radius;
+    @include login-layout(100%,400px);
+    background:#3a4563;
+    border:0;
+    text-align:center;   
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    margin-top:10px;
+  }
+}
+
+input,textarea{
+  &:focus{
+    outline:none
+  }  
+}
+h3{
+  margin:30px auto;
+  text-align:center;
+}
+table{
+  border-collapse:collapse;  
+  @include login-layout(90%,600px);
+  margin:0 auto 20px;
+}
+table{
+  tr,th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+  } 
+  th{
+    background:#f1f1f1;
+  }    
+}
+.more{
+  @include border-radius;
+  width:200px;
+  height:50px;
+  line-height:50px;
+  text-align:center;  
+  margin:0 auto;
+  background:#3a4563;
+  a{
+    color:#fff;
+    text-decoration:none;
+  }
+}
+.pagination-box{
+  position:relative;
+  height:28px;
+  width:100%;
+}
+.pagination{
+  position:absolute;  
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  height:28px; 
+  li{
+    float:left;
+    width:28px; 
+    height:28px;
+    text-align:center;
+    line-height:28px;
+    margin-left:5px; 
+    border:1px solid #ccc;
+    list-style:none;
+    cursor:pointer;
+  }
+}
+.pagination li.active{
+  background:#2d78f4; 
+  color:#fff;
+}
+.pagination li.prev,.pagination li.next{
+  width:auto;
+  padding:0 6px;
+}

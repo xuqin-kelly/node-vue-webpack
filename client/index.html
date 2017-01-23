@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>demo1</title>
+    <link rel="stylesheet" type="text/css" href="/dist/index.css" />
+  </head>
+  <body>
+    <div id="app">
+    	<router-view></router-view>
+    </div>
+
+    <div id="loading" v-show="showLoading">  
+      <div class="dialog-content">loading...</div>  
+      <div class="dialog-overlay"></div>
+    </div>
+
+    <script src="/dist/build.index.js"></script>
+  </body>
+</html>
